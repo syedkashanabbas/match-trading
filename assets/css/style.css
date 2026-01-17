@@ -130,3 +130,120 @@
     animation: none;
   }
 }
+
+
+/* Base */
+.howitWorks-card {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 1.75rem;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(16px);
+  color: white;
+}
+
+/* Card sizes */
+.howitWorks-card--large {
+  min-height: 320px;
+}
+
+.howitWorks-card--medium {
+  min-height: 260px;
+}
+
+.howitWorks-card--small {
+  min-height: 220px;
+}
+
+/* Step number */
+.howitWorks-step {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.08);
+}
+
+/* Text */
+.howitWorks-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.howitWorks-text {
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+
+.howitWorks-subtext {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+}
+.faqs-section {
+  background: #000;
+  color: #fff;
+}
+
+.faqs-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.faqs-left {
+  flex: 1;
+}
+
+.faqs-left h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.faqs-left p {
+  color: #aaa;
+  margin-bottom: 24px;
+  max-width: 420px;
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #00ff66;
+  color: #00ff66;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.faqs-right {
+  flex: 1.2;
+}
+
+.faq-item {
+  border-bottom: 1px solid #222;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding-bottom: 20px;
+  color: #aaa;
+}
