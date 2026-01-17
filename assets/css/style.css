@@ -1,0 +1,132 @@
+
+    body {
+      font-family: 'Archivo', sans-serif;
+      background-color: #050505;
+    }
+   /* marquee container */
+    .nbb-marquee {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 15%,
+        black 85%,
+        transparent
+    );
+    }
+
+    /* moving track */
+    .nbb-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    animation: nbb-marquee-scroll 28s linear infinite;
+    }
+
+    /* logos */
+    .nbb-logo {
+    height: 1.5rem;
+    opacity: 0.65;
+    filter: grayscale(100%);
+    transition: opacity 0.3s ease;
+    }
+
+    .nbb-logo:hover {
+    opacity: 1;
+    }
+    /* CTA Button Wrapper */
+.nbb-cta-btn {
+  position: relative;
+  padding: 2px; /* space for animated border */
+
+  border-radius: 1.25rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Animated lightning border */
+.nbb-cta-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 20%,
+      rgba(255,255,255,0.9),
+      transparent 80%
+    );
+  background-size: 200% 200%;
+  animation: nbb-border-flow 2.8s linear infinite;
+  filter: blur(0.4px);
+}
+
+/* Inner button */
+.nbb-cta-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 1.15rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #4ade80,
+    #16a34a
+  );
+
+  box-shadow:
+    0 20px 60px rgba(34,197,94,0.45),
+    inset 0 0 0 1px rgba(255,255,255,0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Border animation */
+@keyframes nbb-border-flow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nbb-cta-border {
+    animation: none;
+  }
+}
+
+/* animation */
+@keyframes nbb-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .nbb-marquee-track {
+    animation: none;
+  }
+}
